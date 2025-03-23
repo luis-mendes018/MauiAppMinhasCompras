@@ -10,7 +10,7 @@ public class SQLiteDatabaseHelper
     public SQLiteDatabaseHelper(string path) 
     {
         _conn = new SQLiteAsyncConnection(path);
-        _conn.CreateTableAsync<Models.Produto>().Wait();
+        _conn.CreateTableAsync<Produto>().Wait();
     }
 
     public Task<int> Insert(Produto p)
